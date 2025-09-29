@@ -90,7 +90,7 @@ class _LoginPageState extends State<LoginPage> {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
       child: TextFormField(
-        controller: usernameController, // ambil input dari user
+        controller: usernameController, 
         style: TextStyle(color: Colors.black, fontWeight: FontWeight.w400),
         decoration: InputDecoration(
           hintText: "Masukkan Username",
@@ -105,7 +105,7 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  // TextField untuk Password
+
   Widget _passwordField() {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),

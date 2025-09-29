@@ -24,7 +24,7 @@ class DetailPage extends StatelessWidget {
         ),
 
         backgroundColor: Colors.blue[700],
-        elevation: 0, // biar appbar flat
+        elevation: 0, 
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -56,11 +56,11 @@ class DetailPage extends StatelessWidget {
               ),
               const SizedBox(height: 8),
 
-              // sinopsis
+          
               Text(movie.synopsis, style: const TextStyle(fontSize: 15)),
               const SizedBox(height: 12),
 
-              // genre
+          
               Text(
                 "Genre : ${movie.genre}",
                 style: const TextStyle(
@@ -76,7 +76,7 @@ class DetailPage extends StatelessWidget {
               ),
 
               SizedBox(height: 8),
-              // rating
+             
               Text(
                 "Rated  ${movie.rating} /10",
                 style: TextStyle(
@@ -86,7 +86,7 @@ class DetailPage extends StatelessWidget {
                 ),
               ),
 
-              // tombol link menuju store
+              
               Center(
                 child: OutlinedButton(
                   onPressed: () {

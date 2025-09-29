@@ -22,19 +22,19 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.blue[700],
         elevation: 0,
         automaticallyImplyLeading:
-            false, // biar tombol back default nggak muncul
+            false, 
         actions: [
-          // Icon logout
+          
           IconButton(
             icon: Icon(Icons.logout_outlined, color: Colors.white),
             onPressed: () {
-              _logout(context); // panggil fungsi logout
+              _logout(context); 
             },
           ),
         ],
       ),
 
-      // Bagian isi halaman
+     
       body: Center(
         child: Column(
           children: [
@@ -72,7 +72,7 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  // Fungsi untuk logout
+
   void _logout(BuildContext context) {
     Navigator.pushAndRemoveUntil(
       context,
@@ -85,7 +85,7 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  // Widget untuk menampilkan 1 item game di grid
+  
   Widget _movie(context, int index) {
     return InkWell(
       onTap: () {
@@ -108,7 +108,7 @@ class HomePage extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Gambar movie
+            
             Container(
               height: 200,
               width: double.infinity,
@@ -117,7 +117,7 @@ class HomePage extends StatelessWidget {
 
             SizedBox(height: 8),
 
-            // Nama movie
+            
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -144,7 +144,7 @@ class HomePage extends StatelessWidget {
               ],
             ),
 
-            // genre
+            
             Text(
               movieList[index].genre,
               style: TextStyle(
@@ -155,7 +155,7 @@ class HomePage extends StatelessWidget {
 
             SizedBox(height: 8),
 
-            // Baris untuk review + harga
+           
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -165,7 +165,7 @@ class HomePage extends StatelessWidget {
                 ),
               ],
             ),
-            // Nilai review average
+           
             Text(
               "${movieList[index].rating.toString()} /10",
               style: TextStyle(
