@@ -110,7 +110,7 @@ class HomePage extends StatelessWidget {
           children: [
             // Gambar movie
             Container(
-              height: 100,
+              height: 200,
               width: double.infinity,
               child: Image.network(movieList[index].imgUrl, fit: BoxFit.cover),
             ),
@@ -118,13 +118,30 @@ class HomePage extends StatelessWidget {
             SizedBox(height: 8),
 
             // Nama movie
-            Text(
-              movieList[index].title,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
-                color: Colors.blue[900],
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  movieList[index].title,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                    color: Colors.blue[900],
+                  ),
+                ),
+
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    foregroundColor: Colors.white,
+                    backgroundColor: Colors.blue,
+                  ),
+                  child: Text(
+                    "Save",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ],
             ),
 
             // genre

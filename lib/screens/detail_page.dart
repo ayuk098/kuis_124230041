@@ -22,6 +22,7 @@ class DetailPage extends StatelessWidget {
           'Movie Details',
           style: TextStyle(color: Colors.white),
         ),
+
         backgroundColor: Colors.blue[700],
         elevation: 0, // biar appbar flat
       ),
@@ -33,7 +34,7 @@ class DetailPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start, // rata kiri
             children: [
               Container(
-                height: 180,
+                height: 750,
                 width: double.infinity,
                 color: Colors.grey[300],
                 child: Image.network(movie.imgUrl, fit: BoxFit.cover),
